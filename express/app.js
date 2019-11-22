@@ -7,6 +7,5 @@ const PORT = 8050
 app.get('/', (req, res) => res.send('Rota Principal'))
 app.get('/cad', (req, res) => res.send('Rota de cadastro'))
 
-
 // rodando servidor
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))
