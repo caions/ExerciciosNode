@@ -16,10 +16,7 @@ const PORT = 8050
 // rotas
 app.get('/', (req, res) => res.render('principal'))
 app.get('/cad', (req, res) => res.render('cadastro'))
-app.post('/cadastrado',(req,res)=> res.send(
-   [req.body.nome,req.body.sobrenome]
-))
-
+app.post('/cadastrado',(req,res)=> res.render('cadastrado',{nome: req.body.nome, sobrenome: req.body.sobrenome}))
 
 // rodando servidor
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))
